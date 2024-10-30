@@ -5,11 +5,6 @@ public class Presupuesto
     private string fechaCreacion;
     private List<PresupuestoDetalle> listaDetalles;
 
-    public int IdPresupuesto { get; }
-    public string NombreDestinatario { get; }
-    public string FechaCreacion { get; }
-    public List<PresupuestoDetalle> ListaDetalles { get; }
-
     public Presupuesto(int idPresupuesto, string nombreDestinatario, string fechaCreacion)
     {
         this.idPresupuesto = idPresupuesto;
@@ -17,6 +12,11 @@ public class Presupuesto
         this.fechaCreacion = fechaCreacion;
         listaDetalles = new List<PresupuestoDetalle>();
     }
+
+    public int IdPresupuesto { get => idPresupuesto; set => idPresupuesto = value; }
+    public string NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
+    public string FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
+    public List<PresupuestoDetalle> ListaDetalles { get => listaDetalles; set => listaDetalles = value; }
 
     public int MontoPresupuesto()
     {
